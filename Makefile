@@ -23,8 +23,8 @@ todo:
 
 vet:
 	@echo "Running $@:"
-	@$(foreach DIR, $(DIRS), go tool vet -all $(DIR);)
-	@$(foreach DIR, $(DIRS), go tool vet -shadow=true $(DIR);)
+	@$(foreach DIR, $(DIRS), go vet -all $(DIR);)
+	@$(foreach DIR, $(DIRS), go vet -shadow=true $(DIR);)
 
 spelling:
 	@$(foreach DIR, $(DIRS), ${GOPATH}/bin/misspell $(DIR);)
