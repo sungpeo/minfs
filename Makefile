@@ -9,7 +9,7 @@ checks:
 	@(env bash buildscripts/checkgopath.sh)
 
 getdeps: checks
-	@go get github.com/golang/lint/golint && echo "Installed golint:"
+	@go get golang.org/x/lint/golint && echo "Installed golint:"
 	@go get github.com/fzipp/gocyclo && echo "Installed gocyclo:"
 	@go get github.com/remyoudompheng/go-misc/deadcode && echo "Installed deadcode:"
 	@go get github.com/client9/misspell/cmd/misspell && echo "Installed misspell:"
