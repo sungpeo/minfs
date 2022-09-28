@@ -24,7 +24,7 @@ todo:
 vet:
 	@echo "Running $@:"
 	@$(foreach DIR, $(DIRS), go vet -all $(DIR);)
-	@$(foreach DIR, $(DIRS), go vet -shadow=true $(DIR);)
+	@$(foreach DIR, $(DIRS), go vet -vettool=$(which shadow) $(DIR);)
 
 spelling:
 	@$(foreach DIR, $(DIRS), ${GOPATH}/bin/misspell $(DIR);)
